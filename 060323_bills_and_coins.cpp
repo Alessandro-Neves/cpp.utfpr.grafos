@@ -46,29 +46,21 @@ int main()
 
   int i = 0;
   while (input >= 0.01)
-  {
     for (int c = 0; c < 12; c++)
-    {
       if ((input - coins[c]) >= 0)
       {
         result[c]++;
         input -= coins[c];
         break;
       }
-    }
-  }
 
   printf("NOTAS:\n");
   for (int n = 0; n < 6; n++)
-  {
     printf("%d nota(s) de R$ %.2f\n", result[n], coins[n]);
-  }
 
   printf("MOEDAS:\n");
   for (int c = 6; c < 12; c++)
-  {
     printf("%d moeda(s) de R$ %.2f\n", result[c], coins[c]);
-  }
 
   return 0;
 }
